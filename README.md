@@ -2,38 +2,38 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
 
-  <script defer src="https://media.twiliocdn.com/sdk/js/chat/v4.0/twilio-chat.min.js"></script>
-  declare var Twilio;
+    <script defer src="https://media.twiliocdn.com/sdk/js/chat/v4.0/twilio-chat.min.js"></script>
+    declare var Twilio;
   
   Create twilio client:-
   
-  this.twillioClient = await Twilio.Chat.Client.create('token');
+    this.twillioClient = await Twilio.Chat.Client.create('token');
   
   create and join twilio channel :-
   
-  this.twillioClient
-      .createChannel({
-        uniqueName: `${Date.now()} channel`,
-        friendlyName: 'General Chat Channel',
-      })
-      .then((channel) => {
-        this.channel = channel;
-        // join channel after channel created
-        this.channel.join().catch((err) => {
-          console.error(
-            `Couldn't join channel` + channel.friendlyName + ' because ' + err
-          );
-        });
-      });
+      this.twillioClient
+          .createChannel({
+            uniqueName: `${Date.now()} channel`,
+            friendlyName: 'General Chat Channel',
+          })
+          .then((channel) => {
+            this.channel = channel;
+            // join channel after channel created
+            this.channel.join().catch((err) => {
+              console.error(
+                `Couldn't join channel` + channel.friendlyName + ' because ' + err
+              );
+            });
+          });
       
       
-    Event for input message :-
+  Event for input message :-
     
     this.channel.on('messageAdded', (message) => {
           console.log('message received', message);
     });
     
-    Method to send message :-
+  Method to send message :-
     
     this.channel.sendMessage('hello').then(res => {
       console.log('Message Sent', res);
