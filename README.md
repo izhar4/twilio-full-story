@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   
     this.twillioClient = await Twilio.Chat.Client.create('token');
   
-  create and join twilio channel :-
+  Create and join twilio channel :-
   
       this.twillioClient
           .createChannel({
