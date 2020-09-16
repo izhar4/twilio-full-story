@@ -43,7 +43,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     Add script to project :-
     <script defer src="assets/js//full-story.js"></script>
     
-    Track user by user info, for that you need to register user with unique user id
+    Track user by user info, for that you need to register user with unique user id :-
+    
         declare var FS;
         FS.identify(userId, {
           displayName: 'userName',
@@ -52,6 +53,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
           // https://help.fullstory.com/hc/en-us/articles/360020623294-FS-setUserVars-Recording-custom-user-data
           other_custom_variable: 1
         });
+        
+Full Story Track all the user activity during session including clicks, dead clicks, screen playback, error traces, User trends, top users, session length,
+page speed insights also provides funnels to filter our data on the basis of default events and custom fields provided while user register.
+
+## Full story also provides features to create custom events
+    FS.event(event name, {
+      description: 'desc',
+      displayName: 'displayName',
+      sku: 123
+    });
+    
+    Checkout full story api documentation for more https://developer.fullstory.com/introduction
         
 ## Development server
 
