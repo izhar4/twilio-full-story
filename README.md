@@ -64,7 +64,7 @@ page speed insights also provides funnels to filter our data on the basis of def
       sku: 123
     });
     
-    Checkout full story api documentation for more https://developer.fullstory.com/introduction
+Checkout full story api documentation for more [full story api doc](https://developer.fullstory.com/introduction)
         
 ## Development server
 
