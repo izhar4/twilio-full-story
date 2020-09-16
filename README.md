@@ -39,7 +39,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
       console.log('Message Sent', res);
     });
 
-
+## Full Story
+    Add script to project :-
+    <script defer src="assets/js//full-story.js"></script>
+    
+    Track user by user info, for that you need to register user with unique user id
+        declare var FS;
+        FS.identify(userId, {
+          displayName: 'userName',
+          email: 'user email',
+          // TODO: Add your own custom user variables here, details at
+          // https://help.fullstory.com/hc/en-us/articles/360020623294-FS-setUserVars-Recording-custom-user-data
+          other_custom_variable: 1
+        });
+        
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
