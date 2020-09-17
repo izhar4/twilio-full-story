@@ -41,33 +41,33 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     
     
 ## Twilio At Backend Implementaion
-const Twilio = require('twilio');
+    const Twilio = require('twilio');
 
-getMessageList = ()=>{
-// get chat service instance
-const service = getChatService();
-service.channels('channelId')
-      .messages
-      .list()
-      .then(messages => console.log(messages));
-}
+    getMessageList = ()=>{
+    // get chat service instance
+    const service = getChatService();
+    service.channels('channelId')
+          .messages
+          .list()
+          .then(messages => console.log(messages));
+    }
 
 
-function getChatService() {
-  // Twilio Library
-  const client = new Twilio(
-    config.TWILIO_API_KEY,
-    config.TWILIO_API_SECRET,
-    {accountSid: config.TWILIO_ACCOUNT_SID}
-  );
+    function getChatService() {
+      // Twilio Library
+      const client = new Twilio(
+        config.TWILIO_API_KEY,
+        config.TWILIO_API_SECRET,
+        {accountSid: config.TWILIO_ACCOUNT_SID}
+      );
 
-  // Get a reference to the user chat service instance
-  const service = client.chat.services(
-    config.TWILIO_CHAT_SERVICE_SID
-  );
+      // Get a reference to the user chat service instance
+      const service = client.chat.services(
+        config.TWILIO_CHAT_SERVICE_SID
+      );
 
-  return service;
-}  
+      return service;
+    }  
     
 
 ## Full Story
